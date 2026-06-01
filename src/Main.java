@@ -8,30 +8,25 @@ public class Main {
             System.out.println(" Установите версию приложения для Android по ссылке. ");
         }
 
-        int clienOc = 1;
+        int clientOc = 1;
         int clientDeviceYear = 2010;
-        if( clienOc == 0) {
-            if (clientDeviceYear < 2015) {
-                System.out.println(" Установите облегченную версию приложения для iOS по ссылке ");
-            } else {
-                System.out.println(" Установите обычную версию приложения для iOS по ссылке ");
-            }
-        }else if( clienOc >0 ) {
-            if ( clientDeviceYear > 2015) {
-                System.out.println( " Установите обычную версию приложения для Android по ссылке ");
-            }else {
-                System.out.println("Установите обычную версию приложения для Android по ссылке ");
-            }
+        if (clientOc <= 0 && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке ");
+        } else if (clientOc > 0 && clientDeviceYear <= 2015) {
+            System.out.println(" Установите облегченную версию приложения для Android по ссылке ");
+        } else if (clientOc <= 0 && clientDeviceYear > 2015) {
+            System.out.println("Установите обычную версию приложения для iOS по ссылке ");
+        } else if (clientOc > 0 && clientDeviceYear > 2015) {
+            System.out.println(" Установите обычную версию приложения для Android по ссылке ");
         }
-            int year = 2021;
-            if (year < 1584) {
-                System.out.println(year + " Год не являеться високосным ");
-                if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-                    System.out.println(year + "  год является високосным");
-                }
-            } else {
-                System.out.println(year + " год не является високосным ");
-            }
+        int year = 2021;
+        if (year < 1584) {
+            System.out.println(year + " Год не являеться высокосным ");
+        } else if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println(year + "  год является високосным");
+        } else {
+            System.out.println(year + " год не является високосным ");
+        }
             int deliveryDistance = 95;
             int days = 1;
             if (deliveryDistance < 20) {
@@ -46,6 +41,8 @@ public class Main {
             } else {
                 System.out.println(" Доставки нет ");
             }
+
+
             int monthNumber = 12;
             if (monthNumber > 12) {
                 return;
@@ -58,7 +55,7 @@ public class Main {
                     System.out.println(" Зима ");
                     break;
                 case 3:
-                    System.out.println(" Зима ");
+                    System.out.println(" Весна ");
                     break;
                 case 4:
                     System.out.println(" Весна ");
@@ -67,7 +64,7 @@ public class Main {
                     System.out.println(" Весна");
                     break;
                 case 6:
-                    System.out.println(" Весна ");
+                    System.out.println(" Лето ");
                     break;
                 case 7:
                     System.out.println(" Лето ");
@@ -76,7 +73,7 @@ public class Main {
                     System.out.println(" Лето ");
                     break;
                 case 9:
-                    System.out.println(" Лето ");
+                    System.out.println(" Осень ");
                     break;
                 case 10:
                     System.out.println(" Осень ");
@@ -84,13 +81,14 @@ public class Main {
                 case 11:
                     System.out.println(" Осень ");
                 case 12:
-                    System.out.println(" Осень ");
+                    System.out.println(" Зима ");
                     break;
                 default:
                     System.out.println(" Такого месяца нету ");
             }
         }
     }
+
 
 
 
